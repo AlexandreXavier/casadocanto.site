@@ -1,5 +1,7 @@
 import { db } from "~/server/db";
 
+export const dynamic ="force-dynamic"
+
 const moskUrl = [
   "https://utfs.io/f/46c12ca2-9739-4821-9e65-36648a2f59f6-dbjphc.jpg",
   "https://utfs.io/f/bcb7e426-d357-4b52-a206-7617850eb35a-35kigo.jpeg",
@@ -23,7 +25,7 @@ export default async function HomePage() {
       <div className="flex flex-wrap gap-4">
         {posts.map((post)=>(
         <div key={post.id}>{post.name}</div>
-        ))}
+        git))}
         {[...mockImages,...mockImages, ...mockImages, ...mockImages].map((image,index) => (
           <div key={image.id+"-"+index} className="w-48">
             <img src={image.url} />
