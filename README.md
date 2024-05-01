@@ -8,7 +8,7 @@
 - [x] Tidy up build process
 - [x] Actually set up a database (vercel postgres)
 - [] Attach database to UI
-- [] Add Authentication (w/ clerk)
+- [x] Add Authentication (w/ clerk)
 - [] Add Image UpLoad
 - [] Error management (w/Sentry)
 - [] Routing/image page (parallel route)

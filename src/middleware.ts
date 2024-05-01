@@ -1,12 +1,6 @@
-import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+import { clerkMiddleware } from "@clerk/nextjs/server";
 
-const isDashboardRoute = createRouteMatcher(['/dashboard(.*)']);
-
-
-export default clerkMiddleware((auth, req) => {
-  // Restrict dashboard routes to signed in users
-  if (isDashboardRoute(req)) auth().protect();
-});
+export default clerkMiddleware();
 
 export const config = {
   matcher: ['/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
