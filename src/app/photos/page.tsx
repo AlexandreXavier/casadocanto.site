@@ -3,7 +3,6 @@ import photos from "~/lib/photos";
 
 export default async  function Photos() {
 
-
   return (
     <section className='mt-12'>
       <div className='container'>
