@@ -6,8 +6,7 @@ import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "~/app/api/uploadthing/core";
 import Navbar from "~/app/_components/Navbar";
-
-
+import { CSPostHogProvider } from '~/app/_analytics/provider'
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,6 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
+      <CSPostHogProvider>
+
+     
       <html lang="en">
         <body className={`font-sans ${inter.variable}`}>
         <NextSSRPlugin
@@ -40,8 +42,10 @@ export default function RootLayout({
         />
           <Navbar />
           {children}
+          <div id="model-root" />
         </body>
       </html>
+      </CSPostHogProvider>
     </ClerkProvider>
   );
 }
